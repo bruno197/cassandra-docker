@@ -1,0 +1,12 @@
+version: '2'
+services:
+  #CASSANDRA-DB
+  cassandra:
+    image: cassandra:latest
+    container_name: cassandra-db
+    hostname: localhost
+    restart: always
+    ports:
+      - 9042:9042
+    volumes:
+      - ./data:/var/lib/cassandra:rw
